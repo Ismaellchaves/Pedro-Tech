@@ -383,6 +383,140 @@ a{
     text-align: center;
 }
 
+  footer {
+            background-color: #1a1a2e;
+            padding: 20px 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        footer p {
+            color: #ffffff;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* ESTILO DO LINK */
+        footer a {
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        /* EFEITO HOVER */
+        footer a:hover {
+            color: #51ff00;
+        }
+
+        /* =====================================================
+           ANIMAÇÃO DE PISCADA (OPÇÃO 1 - SUAVE)
+        ===================================================== */
+
+        .nome-piscando {
+            animation: piscarSuave 1.5s ease-in-out infinite;
+        }
+
+        @keyframes piscarSuave {
+            0%, 100% {
+                opacity: 1;
+                text-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+            }
+            50% {
+                opacity: 0.3;
+                text-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+            }
+        }
+
+        /* =====================================================
+           ANIMAÇÃO DE PISCADA (OPÇÃO 2 - RÁPIDA)
+        ===================================================== */
+
+        .nome-piscando-rapido {
+            animation: piscarRapido 0.8s ease-in-out infinite;
+        }
+
+        @keyframes piscarRapido {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.1;
+            }
+        }
+
+        /* =====================================================
+           ANIMAÇÃO DE PISCADA (OPÇÃO 3 - COM CORES)
+        ===================================================== */
+
+        .nome-piscando-cores {
+            animation: piscarCores 2s ease-in-out infinite;
+        }
+
+        @keyframes piscarCores {
+            0%, 100% {
+                opacity: 1;
+                color: #00d4ff;
+                text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+            }
+            25% {
+                color: #ff6b6b;
+                text-shadow: 0 0 15px rgba(255, 107, 107, 0.8);
+            }
+            50% {
+                opacity: 0.4;
+                color: #ffd93d;
+                text-shadow: 0 0 15px rgba(255, 217, 61, 0.8);
+            }
+            75% {
+                color: #6bcb77;
+                text-shadow: 0 0 15px rgba(107, 203, 119, 0.8);
+            }
+        }
+
+        /* =====================================================
+           ANIMAÇÃO DE PISCADA (OPÇÃO 4 - TYPEWRITER)
+        ===================================================== */
+
+        .nome-piscando-typewriter {
+            animation: piscarTypewriter 0.9s step-end infinite;
+        }
+
+        @keyframes piscarTypewriter {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* =====================================================
+           ANIMAÇÃO DE PISCADA (OPÇÃO 5 - GLOW PULSANTE)
+        ===================================================== */
+
+        .nome-piscando-glow {
+            animation: glowPulsante 1.8s ease-in-out infinite;
+        }
+
+        @keyframes glowPulsante {
+            0%, 100% {
+                opacity: 1;
+                text-shadow: 
+                    0 0 5px rgba(0, 212, 255, 0.5),
+                    0 0 10px rgba(0, 212, 255, 0.3),
+                    0 0 20px rgba(0, 212, 255, 0.1);
+            }
+            50% {
+                opacity: 0.6;
+                text-shadow: 
+                    0 0 15px rgba(0, 212, 255, 0.8),
+                    0 0 30px rgba(0, 212, 255, 0.5),
+                    0 0 50px rgba(0, 212, 255, 0.2);
+            }
+        }
+
 /* ---------------------------------------------------------- */
 /* RESPONSIVIDADE */
 @media screen and (max-width: 768px){
