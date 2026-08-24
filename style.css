@@ -3414,6 +3414,14 @@ a{
         2s
         infinite;
 
+        .whatsapp-flutuante img {
+    width: 38px;
+    height: 38px;
+
+    object-fit: contain;
+
+    display: block;
+}
 }
 
 
@@ -3528,19 +3536,6 @@ a{
 
         text-align:
             center;
-
-    }
-
-
-    .whatsapp-flutuante {
-
-        width: 58px;
-        height: 58px;
-
-        right: 20px;
-        bottom: 20px;
-
-        font-size: 29px;
 
     }
 
