@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,22 +9,23 @@
     <link rel="shortcut icon" href="./imgs/FavIcon.svg" type="image/x-icon">
     <title>Pedro Tech</title>
 </head>
+
 <body>
 
     <!-- MENUS -->
     <header>
 
         <nav class="mobile-menu">
-        <div>
-            <ul class="menu">
-                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-                <li><a href="#sobre" onclick="toggleMenu()">Quem somos</a></li>
-                <li><a href="#servicos" onclick="toggleMenu()">Serviços</a></li>
-                <li><a href="#beneficios" onclick="toggleMenu()">Benefícios</a></li>
-                <li><a href="#marcas" onclick="toggleMenu()">Localização</a></li>
-                <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
-            </ul>
-        </div>
+            <div>
+                <ul class="menu">
+                    <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                    <li><a href="#sobre" onclick="toggleMenu()">Quem somos</a></li>
+                    <li><a href="#servicos" onclick="toggleMenu()">Serviços</a></li>
+                    <li><a href="#beneficios" onclick="toggleMenu()">Benefícios</a></li>
+                    <li><a href="#marcas" onclick="toggleMenu()">Localização</a></li>
+                    <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+                </ul>
+            </div>
         </nav>
         <nav>
             <div class="line-mobile-menu">
@@ -32,7 +34,7 @@
                 <div class="line3"></div>
             </div>
 
-           
+
 
             <ul class="menu">
                 <li><a href="#home" onclick="toggleMenu()">Home</a></li>
@@ -51,25 +53,367 @@
         </nav>
     </header>
 
-     <!-- HOME -->
-     <section class="home" id="home">
+
+    <br><br><br><br><br><br><br>
+
+    <!-- HOME -->
+    <section class="home" id="home">
+
         <div class="txtHome">
-            <h1>Problemas com <br>seu celular?</h1>
+            <h1>
+                Problemas com <br>
+                <span id="deviceQuestion"></span>
+                <span class="text-cursor"></span>
+            </h1>
+            <p class="home-subtitle">
+                Nós temos a solução para você!
+            </p>
 
-            <a href="https://api.whatsapp.com/send?phone=5571992845405&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."><button class="btn">Fale com a gente</button></a>
-        </div>
-
-        <div class="btn-whats"> 
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-            <a href="https://api.whatsapp.com/send?phone=5571992845405&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." style="position:fixed;width:60px;height:60px;bottom:40px;right:40px;background-image: linear-gradient(to right, #06ad00, #07d5c4);color:#FFF;border-radius:50px;text-align:center;font-size:30px;box-shadow: 1px 1px 2px #888;
-            z-index:1000;" target="_blank">
-            <i style="margin-top:16px" class="fa fa-whatsapp"></i>
+            <a
+                href="https://api.whatsapp.com/send?phone=5571992845405&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
+                <button class="btn">Fale com a gente</button>
             </a>
         </div>
+
+
+        <!-- CARROSSEL DE DISPOSITIVOS -->
+
+        <div class="device-carousel">
+
+            <!-- CELULAR -->
+            <div class="device-slide active">
+
+                <div class="device-phone">
+
+                    <div class="phone-camera"></div>
+
+                    <div class="device-screen">
+
+                        <div class="device-icon"></div>
+
+
+
+                    </div>
+
+                </div>
+                <span class="device-name">
+                    📱 Celular
+                </span>
+            </div>
+
+
+            <!-- VIDEOGAME -->
+            <div class="device-slide">
+
+                <div class="game-console">
+
+                    <!-- CORPO DO CONSOLE -->
+                    <div class="console-body">
+
+                        <!-- PARTE SUPERIOR -->
+                        <div class="console-top">
+
+                            <div class="console-line"></div>
+
+                            <div class="console-power">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+
+                        <!-- FRENTE -->
+                        <div class="console-front">
+
+                            <!-- ENTRADA DE DISCO -->
+                            <div class="disc-slot"></div>
+
+                            <!-- USB -->
+                            <div class="usb-port"></div>
+                            <div class="usb-port"></div>
+
+                            <!-- LED -->
+                            <div class="console-led"></div>
+
+                        </div>
+
+
+                        <!-- LATERAL -->
+                        <div class="console-side">
+
+                            <div class="vent vent-1"></div>
+                            <div class="vent vent-2"></div>
+                            <div class="vent vent-3"></div>
+                            <div class="vent vent-4"></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTROLE ESQUERDO -->
+                    <div class="game-controller controller-left">
+
+                        <div class="controller-light"></div>
+
+                        <div class="controller-left-side">
+
+                            <div class="dpad">
+
+                                <span class="dpad-up"></span>
+                                <span class="dpad-down"></span>
+                                <span class="dpad-left"></span>
+                                <span class="dpad-right"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="controller-center">
+
+                            <div class="controller-button"></div>
+
+                        </div>
+
+
+                        <div class="controller-right-side">
+
+                            <div class="analog-stick"></div>
+
+                            <div class="action-buttons">
+
+                                <span>A</span>
+                                <span>B</span>
+                                <span>X</span>
+                                <span>Y</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTROLE DIREITO -->
+                    <div class="game-controller controller-right">
+
+                        <div class="controller-light"></div>
+
+                        <div class="controller-left-side">
+
+                            <div class="dpad">
+
+                                <span class="dpad-up"></span>
+                                <span class="dpad-down"></span>
+                                <span class="dpad-left"></span>
+                                <span class="dpad-right"></span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="controller-center">
+
+                            <div class="controller-button"></div>
+
+                        </div>
+
+
+                        <div class="controller-right-side">
+
+                            <div class="analog-stick"></div>
+
+                            <div class="action-buttons">
+
+                                <span>A</span>
+                                <span>B</span>
+                                <span>X</span>
+                                <span>Y</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <span class="device-name">
+                    🎮 Videogame
+                </span>
+
+            </div>
+
+
+            <!-- IMPRESSORA -->
+            <div class="device-slide">
+
+                <div class="printer-3d">
+
+                    <div class="printer-top">
+
+                        <div class="printer-display">
+                            <span></span>
+                        </div>
+
+                    </div>
+
+                    <div class="printer-body">
+
+                        <div class="printer-panel">
+
+                            <div class="printer-button"></div>
+                            <div class="printer-button small"></div>
+
+                        </div>
+
+                        <div class="printer-paper-slot">
+
+                            <div class="printer-paper"></div>
+
+                        </div>
+
+                        <div class="printer-status">
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="printer-tray">
+
+                        <div class="paper-sheet"></div>
+
+                    </div>
+
+                </div>
+
+
+                <span class="device-name">
+                    🖨️ Impressora
+                </span>
+            </div>
+
+
+            <!-- NOTEBOOK -->
+            <div class="device-slide">
+
+                <div class="device-notebook">
+
+                    <div class="notebook-screen">
+
+                        <div class="device-icon"></div>
+
+                        
+
+
+
+                    </div>
+
+                    <div class="notebook-base"></div>
+
+                </div>
+                <span class="device-name">
+                    💻 Notebook
+                </span>
+            </div>
+
+
+            <!-- COMPUTADOR GAMER -->
+            <div class="device-slide">
+
+                <div class="gaming-pc">
+
+                    <!-- MONITOR -->
+                    <div class="gaming-monitor">
+
+                        <div class="monitor-screen">
+
+                            <div class="screen-glow"></div>
+
+                            <div class="screen-lines"></div>
+
+                        </div>
+
+                        <div class="monitor-neck"></div>
+
+                        <div class="monitor-base"></div>
+
+                    </div>
+
+
+                    <!-- GABINETE -->
+                    <div class="gaming-case">
+
+                        <div class="case-glass">
+
+                            <div class="fan fan-one"></div>
+
+                            <div class="fan fan-two"></div>
+
+                            <div class="fan fan-three"></div>
+
+                        </div>
+
+
+                        <div class="case-front">
+
+                            <div class="case-light"></div>
+
+                            <div class="case-button"></div>
+
+                            <div class="case-usb"></div>
+
+                            <div class="case-usb"></div>
+
+                        </div>
+
+
+                        <div class="case-bottom">
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TECLADO -->
+                    <div class="gaming-keyboard">
+
+                        <div class="keyboard-row"></div>
+                        <div class="keyboard-row"></div>
+                        <div class="keyboard-row"></div>
+                        <div class="keyboard-row"></div>
+
+                    </div>
+
+
+                    <!-- MOUSE -->
+                    <div class="gaming-mouse">
+
+                        <div class="mouse-wheel"></div>
+
+                    </div>
+
+                </div>
+                <span class="device-name">
+                    🖥️ Computador Gamer
+                </span>
+            </div>
+
+        </div>
+
     </section>
 
-     <!-- ********** SOBRE ********** -->
-     <section class="sobre js-scroll" id="sobre">
+    <!-- ********** SOBRE ********** -->
+    <section class="sobre js-scroll" id="sobre">
         <div class="heading">
             <h2>Prazer, somos a</h2>
             <h3>Pedro Tech!</h3>
@@ -77,149 +421,149 @@
 
         <div class="content">
             <div class="contentBx">
-                <p>Uma assistência técnica especializada no conserto de aparelhos celulares,PCs ,notebooks e vidiogames com especialistas que possuem ampla experiência no mercado de tecnologia.</p>
-                <p>Localizada na cidade de Crateús – CE, a Pedro Tech tem o objetivo de ser a melhor no que faz, perseguindo o reconhecimento de seus clientes, oferecendo produtos e serviços com qualidade, rapidez, preços acessíveis e atendimento especializado.</p>   
+                <p>Uma assistência técnica especializada no conserto de aparelhos celulares,PCs ,notebooks e vidiogames
+                    com especialistas que possuem ampla experiência no mercado de tecnologia.</p>
+                <p>Localizada na cidade de Crateús – CE, a Pedro Tech tem o objetivo de ser a melhor no que faz,
+                    perseguindo o reconhecimento de seus clientes, oferecendo produtos e serviços com qualidade,
+                    rapidez, preços acessíveis e atendimento especializado.</p>
             </div>
 
-            <img class="celular" src="\imgs\img-celular.png" alt="Celular">            
+            <img class="celular" src="\imgs\img-celular.png" alt="Celular">
         </div>
     </section>
 
 
 
-     <!-- ********** SERVIÇOS ********** -->
+    <!-- ********** SERVIÇOS ********** -->
 
-<section class="servicos js-scroll" id="servicos">
+    <section class="servicos js-scroll" id="servicos">
 
-    <div class="heading">
-        <h2>Serviços</h2>
-    </div>
+        <div class="heading">
+            <h2>Serviços</h2>
+        </div>
 
-    <!-- CARDS DOS SERVIÇOS -->
-    <div class="content">
+        <!-- CARDS DOS SERVIÇOS -->
+        <div class="content">
 
-        <div class="servico">
-            <div class="card">
-                <img src="./imgs/icons/1.svg" alt="Ícone de celular trocando de tela">
+            <div class="servico">
+                <div class="card">
+                    <img src="./imgs/icons/1.svg" alt="Ícone de celular trocando de tela">
+                </div>
+                <p>Reparo e <br>troca de tela</p>
             </div>
-            <p>Reparo e <br>troca de tela</p>
-        </div>
 
-        <div class="servico">
-            <div class="card">
-                <img src="./imgs/icons/2.svg" alt="Ícone de carregador">
+            <div class="servico">
+                <div class="card">
+                    <img src="./imgs/icons/2.svg" alt="Ícone de carregador">
+                </div>
+                <p>Acessórios <br>em geral</p>
             </div>
-            <p>Acessórios <br>em geral</p>
-        </div>
 
-        <div class="servico">
-            <div class="card">
-                <img src="./imgs/icons/3.svg" alt="Ícone de bateria">
+            <div class="servico">
+                <div class="card">
+                    <img src="./imgs/icons/3.svg" alt="Ícone de bateria">
+                </div>
+                <p>Troca <br>de bateria</p>
             </div>
-            <p>Troca <br>de bateria</p>
-        </div>
 
-        <div class="servico">
-            <div class="card">
-                <img src="./imgs/icons/4.svg" alt="Ícone de placa">
+            <div class="servico">
+                <div class="card">
+                    <img src="./imgs/icons/4.svg" alt="Ícone de placa">
+                </div>
+                <p>Reparo <br>de placa</p>
             </div>
-            <p>Reparo <br>de placa</p>
-        </div>
 
-        <div class="servico">
-            <div class="card">
-                <img src="./imgs/icons/5.svg" alt="Ícone de carregamento">
+            <div class="servico">
+                <div class="card">
+                    <img src="./imgs/icons/5.svg" alt="Ícone de carregamento">
+                </div>
+                <p>Troca <br>de conectores</p>
             </div>
-            <p>Troca <br>de conectores</p>
-        </div>
 
-        <div class="servico">
-            <div class="card">
-                <img src="./imgs/icons/6.svg" alt="Ícone de engrenagem">
+            <div class="servico">
+                <div class="card">
+                    <img src="./imgs/icons/6.svg" alt="Ícone de engrenagem">
+                </div>
+                <p>Atualizações <br>de sistema</p>
             </div>
-            <p>Atualizações <br>de sistema</p>
+
         </div>
 
-    </div>
+        <!-- ********** CARROSSEL DE SERVIÇOS ********** -->
 
-    <!-- ********** CARROSSEL DE SERVIÇOS ********** -->
+        <div class="galeria-servicos">
 
-    <div class="galeria-servicos">
+            <div class="galeria-titulo">
+                <h3>Veja alguns de nossos serviços</h3>
+                <p>Confira um pouco do nosso trabalho</p>
+            </div>
 
-        <div class="galeria-titulo">
-            <h3>Veja alguns de nossos serviços</h3>
-            <p>Confira um pouco do nosso trabalho</p>
-        </div>
+            <div class="carousel-wrapper">
 
-        <div class="carousel-wrapper">
+                <button class="carousel-btn prev" onclick="moverCarrossel(-1)">
+                    &#10094;
+                </button>
 
-            <button class="carousel-btn prev" onclick="moverCarrossel(-1)">
-                &#10094;
-            </button>
+                <div class="carousel" id="carouselServicos">
 
-            <div class="carousel" id="carouselServicos">
+                    <!-- FOTO -->
+                    <div class="carousel-item">
+                        <img src="./imgs/servicos/servico-1.jpg" alt="Serviço realizado pela Pedro Tech">
+                    </div>
 
-                <!-- FOTO -->
-                <div class="carousel-item">
-                    <img src="./imgs/servicos/servico-1.jpg"
-                         alt="Serviço realizado pela Pedro Tech">
+                    <!-- FOTO -->
+                    <div class="carousel-item">
+                        <img src="./imgs/servicos/servico-2.jpg" alt="Manutenção de celular">
+                    </div>
+
+                    <!-- VÍDEO -->
+                    <div class="carousel-item">
+                        <video controls playsinline>
+                            <source src="./imgs/servicos/video-1.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+
+                    <!-- FOTO -->
+                    <div class="carousel-item">
+                        <img src="./imgs/servicos/servico-3.jpg" alt="Reparo realizado pela Pedro Tech">
+                    </div>
+
+                    <!-- VÍDEO -->
+                    <div class="carousel-item">
+                        <video controls playsinline>
+                            <source src="./imgs/servicos/video-2.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+
+                    <!-- FOTO -->
+                    <div class="carousel-item">
+                        <video controls playsinline>
+                            <source src="./imgs/servicos/video-3.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+
                 </div>
 
-                <!-- FOTO -->
-                <div class="carousel-item">
-                    <img src="./imgs/servicos/servico-2.jpg"
-                         alt="Manutenção de celular">
-                </div>
-
-                <!-- VÍDEO -->
-                <div class="carousel-item">
-                    <video controls playsinline>
-                        <source src="./imgs/servicos/video-1.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeos.
-                    </video>
-                </div>
-
-                <!-- FOTO -->
-                <div class="carousel-item">
-                    <img src="./imgs/servicos/servico-3.jpg"
-                         alt="Reparo realizado pela Pedro Tech">
-                </div>
-
-                <!-- VÍDEO -->
-                <div class="carousel-item">
-                    <video controls playsinline>
-                        <source src="./imgs/servicos/video-2.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeos.
-                    </video>
-                </div>
-
-                <!-- FOTO -->
-                <div class="carousel-item">
-                    <video controls playsinline>
-                        <source src="./imgs/servicos/video-3.mp4" type="video/mp4">
-                        Seu navegador não suporta vídeos.
-                    </video>
-                </div>
+                <button class="carousel-btn next" onclick="moverCarrossel(1)">
+                    &#10095;
+                </button>
 
             </div>
 
-            <button class="carousel-btn next" onclick="moverCarrossel(1)">
-                &#10095;
-            </button>
+            <!-- INDICADORES -->
+            <div class="carousel-dots" id="carouselDots"></div>
 
         </div>
 
-        <!-- INDICADORES -->
-        <div class="carousel-dots" id="carouselDots"></div>
-
-    </div>
-
-</section>
+    </section>
 
 
 
-     <!-- ********** BENEFICIOS ********** -->
-     <section class="beneficios" id="beneficios">
+    <!-- ********** BENEFICIOS ********** -->
+    <section class="beneficios" id="beneficios">
         <div class="content-beneficios-geral">
             <div class="heading">
                 <h2>Beneficíos</h2>
@@ -247,11 +591,13 @@
                 </div>
             </div>
 
-            <a href="https://api.whatsapp.com/send?phone=5571992845405&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."><button class="btn">Solicite seu orçamento agora mesmo</button></a>
+            <a
+                href="https://api.whatsapp.com/send?phone=5571992845405&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."><button
+                    class="btn">Solicite seu orçamento agora mesmo</button></a>
         </div>
     </section>
 
-         <!-- ********** MARCAS ********** -->
+    <!-- ********** MARCAS ********** -->
     <section class="marcas" id="marcas">
         <div>
             <img src="imgs/icons/11.svg" alt="Lopo da apple">
@@ -266,123 +612,421 @@
         </div>
     </section>
 
-         <!-- ********** LOCALIZAÇÃO ********** -->
+    <!-- ********** LOCALIZAÇÃO ********** -->
     <section class="localizacao" id="localizacao">
-            <div class="encontre">
-                <div class="mapa">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.615348102328!2d-38.43373120587737!3d-12.934523169767061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71611591c05885f%3A0x7d5864cf3cf3d4c0!2sTimephone%20-%20assist%C3%AAncia%20t%C3%A9cnica%20em%20celular!5e0!3m2!1spt-BR!2sbr!4v1659665625951!5m2!1spt-BR!2sbr" width="100%" height="350" margin-top="20" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+        <div class="encontre">
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6353.615348102328!2d-38.43373120587737!3d-12.934523169767061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71611591c05885f%3A0x7d5864cf3cf3d4c0!2sTimephone%20-%20assist%C3%AAncia%20t%C3%A9cnica%20em%20celular!5e0!3m2!1spt-BR!2sbr!4v1659665625951!5m2!1spt-BR!2sbr"
+                    width="100%" height="350" margin-top="20" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
-     <!-- ********** CONTATO ********** -->
-                <div class="contatos" id="contato">
-                    <p>Telefone: (71) 3486-7772</p>
+            <!-- ********** CONTATO ********** -->
+            <div class="contatos" id="contato">
+                <p>Telefone: (71) 3486-7772</p>
 
-                    <a href="#home">
+                <a href="#home">
                     <img src="./imgs/pedrotech.jpg" class="Logo" alt="Logo da Pedro Tech"></a>
 
-                    <div class="redes">
-                        <p>Redes Sociais:</p>
+                <div class="redes">
+                    <p>Redes Sociais:</p>
 
-                        <a href="https://www.instagram.com/_pedro__tech_/?utm_source=ig_web_button_share_sheet">
+                    <a href="https://www.instagram.com/_pedro__tech_/?utm_source=ig_web_button_share_sheet">
                         <img src="imgs/icons/instagram.svg" alt="Logo do instagram"></a>
 
-                        <a href="https://api.whatsapp.com/send?phone=5571992845405&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
+                    <a
+                        href="https://api.whatsapp.com/send?phone=5571992845405&text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.">
                         <img src="./imgs/icons/whatsapp.svg" alt="Logo WhatsApp"></a>
-                    </div>
-                </div>                 
+                </div>
             </div>
+        </div>
     </section>
 
 
-<script>
+    <script>
 
-const carousel = document.getElementById('carouselServicos');
-const dotsContainer = document.getElementById('carouselDots');
+        /* =====================================================
+           CARROSSEL DE SERVIÇOS
+        ===================================================== */
 
-const items = document.querySelectorAll('.carousel-item');
+        const carousel = document.getElementById('carouselServicos');
+        const dotsContainer = document.getElementById('carouselDots');
 
-let indexAtual = 0;
+        const items = document.querySelectorAll('.carousel-item');
+
+        let indexAtual = 0;
 
 
-/* CRIA OS INDICADORES */
+        /* CRIA OS INDICADORES */
 
-items.forEach((item, index) => {
+        items.forEach((item, index) => {
 
-    const dot = document.createElement('div');
+            const dot = document.createElement('div');
 
-    dot.classList.add('carousel-dot');
+            dot.classList.add('carousel-dot');
 
-    if (index === 0) {
-        dot.classList.add('active');
-    }
+            if (index === 0) {
+                dot.classList.add('active');
+            }
 
-    dot.addEventListener('click', () => {
+            dot.addEventListener('click', () => {
 
-        indexAtual = index;
+                indexAtual = index;
 
-        item.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'center'
+                item.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'center'
+                });
+
+                atualizarDots();
+
+            });
+
+            dotsContainer.appendChild(dot);
+
         });
 
-        atualizarDots();
 
-    });
-
-    dotsContainer.appendChild(dot);
-
-});
+        const dots =
+            document.querySelectorAll('.carousel-dot');
 
 
-const dots = document.querySelectorAll('.carousel-dot');
+        /* MOVER CARROSSEL */
+
+        function moverCarrossel(direcao) {
+
+            indexAtual += direcao;
+
+            if (indexAtual < 0) {
+                indexAtual = items.length - 1;
+            }
+
+            if (indexAtual >= items.length) {
+                indexAtual = 0;
+            }
+
+            items[indexAtual].scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+                inline: 'center'
+            });
+
+            atualizarDots();
+
+        }
 
 
-/* MOVER CARROSSEL */
+        /* ATUALIZA INDICADORES */
 
-function moverCarrossel(direcao) {
+        function atualizarDots() {
 
-    indexAtual += direcao;
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
 
-    if (indexAtual < 0) {
-        indexAtual = items.length - 1;
-    }
+            if (dots[indexAtual]) {
+                dots[indexAtual].classList.add('active');
+            }
 
-    if (indexAtual >= items.length) {
-        indexAtual = 0;
-    }
-
-    items[indexAtual].scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
-    });
-
-    atualizarDots();
-}
-
-
-/* ATUALIZA INDICADORES */
-
-function atualizarDots() {
-
-    dots.forEach(dot => {
-        dot.classList.remove('active');
-    });
-
-    if (dots[indexAtual]) {
-        dots[indexAtual].classList.add('active');
-    }
-
-}
-
-</script>
+        }
 
 
 
+        /* =====================================================
+           HOME
+           CARROSSEL DE DISPOSITIVOS + TEXTO SINCRONIZADO
+        ===================================================== */
 
- <footer>
-    <p>Desenvolvido por <a href="https://l.instagram.com/?u=https%3A%2F%2Fismaell.netlify.app%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafl9gb8Nsh_moV5K-_n89VhCSG9yJwkv3brC-V4l6F7Umrxq6scZ_80vDu1qQ_aem_TpuSF38_6NOG8FPSO_FesQ&e=AUDm7vCZNuQDZB7NWr8rw8pT3-Y3Z2ggUVpAxzr6a1vNoT3umWJVjhQCvW4SKxqkwkRp2H-wkTYwvMtCnXocUxc2gouc-pzHRjBs3EtViKdlKk6WfXOf2r8AajnkGwjtSvn8Mqg"> ismaell chaves</a></p>
- </footer>
+
+        /*
+           IMPORTANTE:
+    
+           A ordem dos dispositivos aqui precisa ser
+           a mesma ordem dos .device-slide no HTML.
+        */
+
+        const dispositivos = [
+
+            {
+                frase: "seu celular?"
+            },
+
+            {
+                frase: "seu videogame?"
+            },
+
+            {
+                frase: "sua impressora?"
+            },
+
+            {
+                frase: "seu notebook?"
+            },
+
+            {
+                frase: "seu computador?"
+            }
+
+        ];
+
+
+        /* ELEMENTOS */
+
+        const deviceSlides =
+            document.querySelectorAll(
+                '.device-slide'
+            );
+
+        const deviceQuestion =
+            document.getElementById(
+                'deviceQuestion'
+            );
+
+
+        /* CONTROLE */
+
+        let deviceIndex = 0;
+
+        let letraAtual = 0;
+
+        let apagandoTexto = false;
+
+
+        /* VELOCIDADES */
+
+        const velocidadeDigitacao = 80;
+
+        const velocidadeApagar = 45;
+
+        /*
+           Tempo que fica mostrando
+           a frase completa.
+    
+           5000 = 5 segundos
+        */
+
+        const tempoFrase = 5000;
+
+
+        /* =====================================================
+           MOSTRAR DISPOSITIVO
+        ===================================================== */
+
+        function mostrarDispositivo() {
+
+            deviceSlides.forEach((slide) => {
+
+                slide.classList.remove('active');
+
+            });
+
+
+            if (deviceSlides[deviceIndex]) {
+
+                deviceSlides[deviceIndex]
+                    .classList.add('active');
+
+            }
+
+        }
+
+
+        /* =====================================================
+           ANIMAÇÃO DA FRASE
+        ===================================================== */
+
+        function animarFrase() {
+
+            /*
+               Proteção caso o elemento não exista
+            */
+
+            if (!deviceQuestion) {
+                return;
+            }
+
+
+            const frase =
+                dispositivos[deviceIndex].frase;
+
+
+            /* ================================================
+               DIGITANDO
+            ================================================ */
+
+            if (!apagandoTexto) {
+
+                deviceQuestion.textContent =
+                    frase.substring(
+                        0,
+                        letraAtual + 1
+                    );
+
+
+                letraAtual++;
+
+
+                /*
+                   Terminou de escrever
+                */
+
+                if (
+                    letraAtual >=
+                    frase.length
+                ) {
+
+                    /*
+                       Espera 5 segundos
+                       com frase + dispositivo
+                    */
+
+                    setTimeout(() => {
+
+                        apagandoTexto = true;
+
+                        animarFrase();
+
+                    }, tempoFrase);
+
+
+                    return;
+
+                }
+
+
+                /*
+                   Continua digitando
+                */
+
+                setTimeout(
+                    animarFrase,
+                    velocidadeDigitacao
+                );
+
+            }
+
+
+            /* ================================================
+               APAGANDO
+            ================================================ */
+
+            else {
+
+                deviceQuestion.textContent =
+                    frase.substring(
+                        0,
+                        letraAtual - 1
+                    );
+
+
+                letraAtual--;
+
+
+                /*
+                   Terminou de apagar
+                */
+
+                if (letraAtual <= 0) {
+
+                    apagandoTexto = false;
+
+
+                    /*
+                       Próximo dispositivo
+                    */
+
+                    deviceIndex++;
+
+
+                    /*
+                       Volta para o primeiro
+                    */
+
+                    if (
+                        deviceIndex >=
+                        dispositivos.length
+                    ) {
+
+                        deviceIndex = 0;
+
+                    }
+
+
+                    /*
+                       TROCA O DISPOSITIVO
+                       JUNTO COM A FRASE
+                    */
+
+                    mostrarDispositivo();
+
+
+                    /*
+                       Pequena pausa antes
+                       de começar a escrever
+                    */
+
+                    setTimeout(
+                        animarFrase,
+                        300
+                    );
+
+
+                    return;
+
+                }
+
+
+                /*
+                   Continua apagando
+                */
+
+                setTimeout(
+                    animarFrase,
+                    velocidadeApagar
+                );
+
+            }
+
+        }
+
+
+        /* =====================================================
+           INICIAR CARROSSEL DA HOME
+        ===================================================== */
+
+        if (
+            deviceSlides.length > 0 &&
+            deviceQuestion
+        ) {
+
+            /*
+               Começa mostrando o primeiro
+               dispositivo
+            */
+
+            mostrarDispositivo();
+
+
+            /*
+               Começa a digitação
+            */
+
+            animarFrase();
+
+        }
+
+
+
+    </script>
+
+
+    <footer>
+        <p>Desenvolvido por <a
+                href="https://l.instagram.com/?u=https%3A%2F%2Fismaell.netlify.app%2F%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAcGRvZgJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAafl9gb8Nsh_moV5K-_n89VhCSG9yJwkv3brC-V4l6F7Umrxq6scZ_80vDu1qQ_aem_TpuSF38_6NOG8FPSO_FesQ&e=AUDm7vCZNuQDZB7NWr8rw8pT3-Y3Z2ggUVpAxzr6a1vNoT3umWJVjhQCvW4SKxqkwkRp2H-wkTYwvMtCnXocUxc2gouc-pzHRjBs3EtViKdlKk6WfXOf2r8AajnkGwjtSvn8Mqg">
+                ismaell chaves</a></p>
+    </footer>
 </body>
+
 </html>
