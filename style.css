@@ -824,3 +824,2316 @@ a{
 * {
     scrollbar-width: none;
 }
+
+
+/* =====================================================
+   HOME - CARROSSEL DE DISPOSITIVOS
+===================================================== */
+
+.home {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 100px 8%;
+
+    overflow: hidden;
+}
+
+
+/* TEXTO */
+
+.txtHome {
+    width: 48%;
+
+    z-index: 5;
+}
+
+.txtHome h1 {
+    margin: 0;
+}
+
+.home-subtitle {
+    margin-top: 18px;
+    margin-bottom: 20px;
+
+    color: #b8c1cc;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 1.05em;
+
+    text-align: left;
+}
+
+
+/* =====================================================
+   ÁREA DO CARROSSEL
+===================================================== */
+
+.device-carousel {
+
+    width: 48%;
+
+    height: 550px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* SLIDES */
+
+.device-slide {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    opacity: 0;
+
+    transform:
+        translateX(100px)
+        scale(.85);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    pointer-events: none;
+
+}
+
+
+/* SLIDE ATIVO */
+
+.device-slide.active {
+
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        scale(1);
+
+}
+
+
+/* =====================================================
+   ANIMAÇÃO DOS DISPOSITIVOS
+===================================================== */
+
+.device-phone,
+.device-videogame,
+.device-impressora,
+.device-notebook,
+.device-pc {
+
+    animation:
+        floatingDevice
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes floatingDevice {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+.device-phone {
+
+    width: 270px;
+    height: 500px;
+
+    padding: 10px;
+
+    border-radius: 38px;
+
+    background: #080c13;
+
+    border: 5px solid #293444;
+
+    box-shadow:
+        0 0 30px rgba(0,74,173,.45),
+        0 0 80px rgba(7,172,213,.15);
+
+    position: relative;
+
+}
+
+
+.device-screen {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 28px;
+
+    background:
+        radial-gradient(
+            circle,
+            #12385c,
+            #07111f 60%,
+            #03070d
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.phone-camera {
+
+    position: absolute;
+
+    width: 65px;
+    height: 18px;
+
+    top: 15px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    background: #020202;
+
+    border-radius: 20px;
+
+    z-index: 2;
+
+}
+
+
+/* =====================================================
+   VIDEOGAME
+===================================================== */
+
+.device-videogame {
+
+    width: 440px;
+    height: 280px;
+
+    padding: 14px;
+
+    border-radius: 25px;
+
+    background: #0b1019;
+
+    border: 5px solid #293444;
+
+    box-shadow:
+        0 0 30px rgba(0,74,173,.4);
+
+}
+
+
+.game-screen {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 15px;
+
+    background:
+        radial-gradient(
+            circle,
+            #143e61,
+            #050b14
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   IMPRESSORA
+===================================================== */
+
+.device-impressora {
+
+    width: 440px;
+    height: 300px;
+
+    padding: 15px;
+
+    border-radius: 25px;
+
+    background: #151d28;
+
+    border: 5px solid #293444;
+
+    box-shadow:
+        0 0 30px rgba(0,74,173,.35);
+
+}
+
+
+.printer-screen {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #172a3d,
+            #050b12
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   NOTEBOOK
+===================================================== */
+
+.device-notebook {
+
+    width: 500px;
+
+}
+
+
+.notebook-screen {
+
+    width: 450px;
+    height: 280px;
+
+    margin: auto;
+
+    border-radius: 15px 15px 8px 8px;
+
+    background: #080d15;
+
+    border: 6px solid #293444;
+
+    box-shadow:
+        0 0 30px rgba(0,74,173,.35);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+.notebook-base {
+
+    width: 500px;
+    height: 18px;
+
+    background: #293444;
+
+    border-radius:
+        0 0 20px 20px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================================
+   PC
+===================================================== */
+
+.device-pc {
+
+    width: 430px;
+    height: 330px;
+
+    padding: 15px;
+
+    border-radius: 20px;
+
+    background: #080c13;
+
+    border: 5px solid #293444;
+
+    box-shadow:
+        0 0 30px rgba(0,74,173,.4);
+
+}
+
+
+.pc-screen {
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 12px;
+
+    background:
+        radial-gradient(
+            circle,
+            #143e61,
+            #050b14
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   TEXTOS
+===================================================== */
+
+.device-icon {
+
+    font-size: 60px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.device-screen h3,
+.game-screen h3,
+.printer-screen h3,
+.notebook-screen h3,
+.pc-screen h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.device-screen p,
+.game-screen p,
+.printer-screen p,
+.notebook-screen p,
+.pc-screen p {
+
+    color: #b8c1cc;
+
+    font-size: 14px;
+
+}
+
+
+.typing-line {
+
+    margin-top: 8px;
+
+    color: #07ACD5;
+
+    font-size: 13px;
+
+}
+
+
+/* NOME */
+
+.device-name {
+
+    margin-top: 25px;
+
+    padding: 9px 25px;
+
+    border-radius: 30px;
+
+    background: rgba(21,40,65,.8);
+
+    border: 1px solid rgba(7,172,213,.5);
+
+    color: white;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width: 900px) {
+
+    .home {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 30px;
+
+        padding:
+            120px 20px 60px;
+
+    }
+
+
+    .txtHome {
+
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+
+    .txtHome h1 {
+
+        text-align: center;
+
+    }
+
+
+    .home-subtitle {
+
+        text-align: center;
+
+    }
+
+
+    .device-carousel {
+
+        width: 100%;
+
+        height: 450px;
+
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .device-carousel {
+
+        height: 380px;
+
+    }
+
+
+    .device-phone {
+
+        width: 190px;
+        height: 350px;
+
+    }
+
+
+    .device-videogame {
+
+        width: 290px;
+        height: 190px;
+
+    }
+
+
+    .device-impressora {
+
+        width: 290px;
+        height: 200px;
+
+    }
+
+
+    .device-notebook {
+
+        width: 310px;
+
+    }
+
+
+    .notebook-screen {
+
+        width: 280px;
+        height: 175px;
+
+    }
+
+
+    .notebook-base {
+
+        width: 310px;
+
+    }
+
+
+    .device-pc {
+
+        width: 290px;
+        height: 210px;
+
+    }
+
+
+    .device-icon {
+
+        font-size: 40px;
+
+    }
+
+}
+
+/* =====================================================
+   TEXTO ANIMADO DA HOME
+===================================================== */
+
+#deviceQuestion {
+    display: inline-block;
+
+    background-image:
+        linear-gradient(
+            to right,
+            #004AAD,
+            #07ACD5
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* CURSOR DA DIGITAÇÃO */
+
+.text-cursor {
+
+    display: inline-block;
+
+    width: 3px;
+
+    height: .85em;
+
+    margin-left: 5px;
+
+    vertical-align: middle;
+
+    background: #07ACD5;
+
+    box-shadow:
+        0 0 8px #07ACD5;
+
+    animation:
+        cursorBlink .7s infinite;
+
+}
+
+
+@keyframes cursorBlink {
+
+    0%,
+    45% {
+        opacity: 1;
+    }
+
+    46%,
+    100% {
+        opacity: 0;
+    }
+
+}
+
+/* =====================================================
+   VIDEOGAME - CONSOLE MODERNO
+===================================================== */
+
+.game-console {
+
+    width: 520px;
+    height: 360px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    animation:
+        gameFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =====================================================
+   CONSOLE
+===================================================== */
+
+.console-body {
+
+    width: 350px;
+    height: 170px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #202a38,
+            #0b1018
+        );
+
+    border-radius: 20px;
+
+    border: 3px solid #344154;
+
+    box-shadow:
+
+        0 20px 40px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(0,74,173,.35);
+
+    transform:
+        perspective(700px)
+        rotateX(8deg)
+        rotateY(-8deg);
+
+    z-index: 5;
+
+}
+
+
+/* PARTE SUPERIOR */
+
+.console-top {
+
+    position: absolute;
+
+    width: 100%;
+    height: 45px;
+
+    top: 0;
+    left: 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+
+}
+
+
+/* LINHA DO CONSOLE */
+
+.console-line {
+
+    position: absolute;
+
+    width: 190px;
+    height: 5px;
+
+    top: 17px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 10px;
+
+    background:
+        #080c12;
+
+}
+
+
+/* BOTÃO POWER */
+
+.console-power {
+
+    position: absolute;
+
+    right: 18px;
+    top: 13px;
+
+    width: 20px;
+    height: 20px;
+
+    border:
+        2px solid
+        #536170;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* LED POWER */
+
+.console-power span {
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 10px #07ACD5,
+        0 0 20px #07ACD5;
+
+    animation:
+        powerBlink
+        2s
+        infinite;
+
+}
+
+
+@keyframes powerBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+}
+
+
+/* =====================================================
+   FRENTE
+===================================================== */
+
+.console-front {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 25px;
+
+    gap: 10px;
+
+}
+
+
+/* ENTRADA DE DISCO */
+
+.disc-slot {
+
+    width: 90px;
+    height: 7px;
+
+    background:
+        #030507;
+
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 1px 2px #000;
+
+}
+
+
+/* USB */
+
+.usb-port {
+
+    width: 20px;
+    height: 9px;
+
+    background:
+        #030507;
+
+    border-radius: 3px;
+
+}
+
+
+/* LED FRONTAL */
+
+.console-led {
+
+    width: 5px;
+    height: 45px;
+
+    margin-left: auto;
+
+    border-radius: 10px;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 10px #07ACD5,
+        0 0 20px #07ACD5;
+
+    animation:
+        ledPulse
+        2s
+        infinite;
+
+}
+
+
+@keyframes ledPulse {
+
+    0% {
+        opacity: .5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .5;
+    }
+
+}
+
+
+/* =====================================================
+   LATERAL / VENTILAÇÃO
+===================================================== */
+
+.console-side {
+
+    position: absolute;
+
+    right: -3px;
+    top: 48px;
+
+    width: 50px;
+    height: 90px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 6px;
+
+}
+
+
+.vent {
+
+    width: 30px;
+    height: 4px;
+
+    border-radius: 10px;
+
+    background:
+        #05080c;
+
+}
+
+
+/* =====================================================
+   CONTROLES
+===================================================== */
+
+.game-controller {
+
+    position: absolute;
+
+    width: 150px;
+    height: 85px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #263142,
+            #0d131d
+        );
+
+    border:
+        3px solid
+        #344154;
+
+    border-radius:
+        35px 35px
+        45px 45px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,.4),
+
+        0 0 20px
+        rgba(0,74,173,.2);
+
+    z-index: 10;
+
+}
+
+
+/* CONTROLE ESQUERDO */
+
+.controller-left {
+
+    left: 5px;
+
+    bottom: 30px;
+
+    transform:
+        rotate(-12deg);
+
+}
+
+
+/* CONTROLE DIREITO */
+
+.controller-right {
+
+    right: 5px;
+
+    bottom: 30px;
+
+    transform:
+        rotate(12deg);
+
+}
+
+
+/* =====================================================
+   LUZ DO CONTROLE
+===================================================== */
+
+.controller-light {
+
+    position: absolute;
+
+    top: 10px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    width: 35px;
+    height: 3px;
+
+    border-radius: 10px;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 8px #07ACD5;
+
+}
+
+
+/* =====================================================
+   D-PAD
+===================================================== */
+
+.dpad {
+
+    position: absolute;
+
+    left: 18px;
+    top: 28px;
+
+    width: 35px;
+    height: 35px;
+
+}
+
+
+.dpad span {
+
+    position: absolute;
+
+    background:
+        #080d14;
+
+    border-radius: 4px;
+
+}
+
+
+.dpad-up,
+.dpad-down {
+
+    width: 11px;
+    height: 35px;
+
+    left: 12px;
+
+}
+
+
+.dpad-left,
+.dpad-right {
+
+    width: 35px;
+    height: 11px;
+
+    top: 12px;
+
+}
+
+
+.dpad-up {
+    top: 0;
+}
+
+.dpad-down {
+    bottom: 0;
+}
+
+.dpad-left {
+    left: 0;
+}
+
+.dpad-right {
+    right: 0;
+}
+
+
+/* =====================================================
+   BOTÃO CENTRAL
+===================================================== */
+
+.controller-button {
+
+    position: absolute;
+
+    left: 50%;
+    top: 40px;
+
+    transform:
+        translate(-50%,-50%);
+
+    width: 15px;
+    height: 8px;
+
+    background:
+        #080d14;
+
+    border-radius: 10px;
+
+}
+
+
+/* =====================================================
+   ANALÓGICO
+===================================================== */
+
+.analog-stick {
+
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    border-radius: 50%;
+
+    background:
+        #080d14;
+
+    box-shadow:
+        inset 0 2px 3px #394555;
+
+}
+
+
+/* =====================================================
+   BOTÕES A B X Y
+===================================================== */
+
+.action-buttons {
+
+    position: absolute;
+
+    right: 15px;
+    top: 25px;
+
+    width: 40px;
+    height: 40px;
+
+}
+
+
+.action-buttons span {
+
+    position: absolute;
+
+    width: 13px;
+    height: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        #111923;
+
+    border:
+        1px solid
+        #455367;
+
+    color:
+        #07ACD5;
+
+    font-size: 6px;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+}
+
+
+/* POSIÇÕES */
+
+.action-buttons span:nth-child(1) {
+
+    top: 0;
+    left: 13px;
+
+}
+
+
+.action-buttons span:nth-child(2) {
+
+    top: 13px;
+    right: 0;
+
+}
+
+
+.action-buttons span:nth-child(3) {
+
+    bottom: 0;
+    left: 13px;
+
+}
+
+
+.action-buttons span:nth-child(4) {
+
+    top: 13px;
+    left: 0;
+
+}
+
+
+/* =====================================================
+   ANIMAÇÃO
+===================================================== */
+
+@keyframes gameFloat {
+
+    0% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .game-console {
+
+        width: 340px;
+        height: 250px;
+
+        transform:
+            scale(.8);
+
+    }
+
+
+    .console-body {
+
+        width: 250px;
+        height: 125px;
+
+    }
+
+
+    .game-controller {
+
+        width: 110px;
+        height: 65px;
+
+    }
+
+
+    .controller-left {
+
+        left: 0;
+
+        bottom: 20px;
+
+    }
+
+
+    .controller-right {
+
+        right: 0;
+
+        bottom: 20px;
+
+    }
+
+
+    .dpad {
+
+        transform:
+            scale(.75);
+
+        transform-origin:
+            left top;
+
+    }
+
+
+    .action-buttons {
+
+        transform:
+            scale(.75);
+
+        transform-origin:
+            right top;
+
+    }
+
+}
+
+/* =====================================================
+   IMPRESSORA 3D
+===================================================== */
+
+.printer-3d {
+
+    position: relative;
+
+    width: 380px;
+    height: 330px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    animation:
+        printerFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* CORPO */
+
+.printer-body {
+
+    position: absolute;
+
+    width: 280px;
+    height: 170px;
+
+    bottom: 55px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #273344,
+            #0c121a
+        );
+
+    border:
+        3px solid
+        #39485b;
+
+    border-radius:
+        15px 15px 20px 20px;
+
+    box-shadow:
+        0 20px 35px
+        rgba(0,0,0,.45),
+
+        0 0 25px
+        rgba(0,74,173,.25);
+
+}
+
+
+/* PARTE SUPERIOR */
+
+.printer-top {
+
+    position: absolute;
+
+    width: 230px;
+    height: 75px;
+
+    top: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #344256,
+            #111925
+        );
+
+    border:
+        3px solid
+        #3c4a5d;
+
+    border-radius:
+        18px 18px 8px 8px;
+
+    z-index: 4;
+
+}
+
+
+/* DISPLAY */
+
+.printer-display {
+
+    position: absolute;
+
+    right: 20px;
+    top: 18px;
+
+    width: 45px;
+    height: 25px;
+
+    border-radius: 5px;
+
+    background:
+        #05090e;
+
+    border:
+        1px solid
+        #45566c;
+
+}
+
+
+.printer-display span {
+
+    position: absolute;
+
+    width: 20px;
+    height: 3px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 8px #07ACD5;
+
+}
+
+
+/* PAINEL */
+
+.printer-panel {
+
+    position: absolute;
+
+    right: 20px;
+    top: 25px;
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.printer-button {
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 8px #07ACD5;
+
+}
+
+
+.printer-button.small {
+
+    width: 8px;
+    height: 8px;
+
+    background:
+        #536170;
+
+    box-shadow: none;
+
+}
+
+
+/* SAÍDA DE PAPEL */
+
+.printer-paper-slot {
+
+    position: absolute;
+
+    width: 170px;
+    height: 40px;
+
+    left: 25px;
+    bottom: 20px;
+
+    background:
+        #05080c;
+
+    border-radius: 5px;
+
+}
+
+
+/* PAPEL */
+
+.printer-paper {
+
+    position: absolute;
+
+    width: 125px;
+    height: 55px;
+
+    background:
+        #f5f7fa;
+
+    left: 22px;
+    bottom: -32px;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,.3);
+
+}
+
+
+/* STATUS */
+
+.printer-status {
+
+    position: absolute;
+
+    left: 25px;
+    top: 30px;
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 10px #07ACD5;
+
+}
+
+
+/* BANDEJA */
+
+.printer-tray {
+
+    position: absolute;
+
+    width: 190px;
+    height: 25px;
+
+    bottom: 25px;
+
+    background:
+        #111923;
+
+    border:
+        2px solid
+        #344154;
+
+    border-radius:
+        5px;
+
+}
+
+
+/* FOLHA NA BANDEJA */
+
+.paper-sheet {
+
+    position: absolute;
+
+    width: 110px;
+    height: 70px;
+
+    left: 40px;
+    bottom: 5px;
+
+    background:
+        #ffffff;
+
+    transform:
+        rotate(-2deg);
+
+    box-shadow:
+        0 5px 10px
+        rgba(0,0,0,.25);
+
+}
+
+
+/* ANIMAÇÃO */
+
+@keyframes printerFloat {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-10px);
+    }
+
+}
+/* =====================================================
+   PC GAMER
+===================================================== */
+
+.gaming-pc {
+
+    position: relative;
+
+    width: 550px;
+    height: 390px;
+
+    animation:
+        pcFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* =====================================================
+   MONITOR
+===================================================== */
+
+.gaming-monitor {
+
+    position: absolute;
+
+    left: 25px;
+    top: 15px;
+
+    width: 300px;
+    height: 220px;
+
+}
+
+
+/* TELA */
+
+.monitor-screen {
+
+    position: relative;
+
+    width: 300px;
+    height: 180px;
+
+    border:
+        4px solid
+        #344154;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #07101c,
+            #10233a
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(0,74,173,.5);
+
+    overflow: hidden;
+
+}
+
+
+/* BRILHO DA TELA */
+
+.screen-glow {
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(7,172,213,.35),
+            transparent 60%
+        );
+
+}
+
+
+/* LINHAS DA TELA */
+
+.screen-lines {
+
+    position: absolute;
+
+    width: 150px;
+    height: 3px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+
+        0 -15px 0
+        rgba(7,172,213,.4),
+
+        0 15px 0
+        rgba(7,172,213,.25),
+
+        0 0 15px
+        #07ACD5;
+
+}
+
+
+/* SUPORTE */
+
+.monitor-neck {
+
+    width: 30px;
+    height: 45px;
+
+    margin: auto;
+
+    background:
+        #202b3b;
+
+}
+
+
+/* BASE */
+
+.monitor-base {
+
+    width: 110px;
+    height: 12px;
+
+    margin:
+        -2px auto;
+
+    border-radius: 10px;
+
+    background:
+        #202b3b;
+
+}
+
+
+/* =====================================================
+   GABINETE GAMER
+===================================================== */
+
+.gaming-case {
+
+    position: absolute;
+
+    right: 20px;
+    top: 30px;
+
+    width: 175px;
+    height: 285px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1c2736,
+            #080d14
+        );
+
+    border:
+        3px solid
+        #39485b;
+
+    border-radius: 12px;
+
+    box-shadow:
+
+        0 20px 40px
+        rgba(0,0,0,.5),
+
+        0 0 30px
+        rgba(0,74,173,.4);
+
+    overflow: hidden;
+
+}
+
+
+/* VIDRO LATERAL */
+
+.case-glass {
+
+    position: absolute;
+
+    left: 12px;
+    top: 12px;
+
+    width: 125px;
+    height: 250px;
+
+    border:
+        2px solid
+        rgba(150,200,255,.25);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.08),
+            rgba(0,50,100,.12)
+        );
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   VENTOINHAS
+===================================================== */
+
+.fan {
+
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    border:
+        5px solid
+        #24364c;
+
+    background:
+        radial-gradient(
+            circle,
+            #0b1018 20%,
+            #142a40 22%,
+            #07101c 55%
+        );
+
+    box-shadow:
+        0 0 15px
+        rgba(7,172,213,.7);
+
+    animation:
+        fanRotate
+        3s
+        linear
+        infinite;
+
+}
+
+
+.fan::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 10px #07ACD5;
+
+}
+
+
+.fan-one {
+
+    left: 30px;
+    top: 15px;
+
+}
+
+
+.fan-two {
+
+    left: 30px;
+    top: 90px;
+
+}
+
+
+.fan-three {
+
+    left: 30px;
+    top: 165px;
+
+}
+
+
+@keyframes fanRotate {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =====================================================
+   FRENTE DO GABINETE
+===================================================== */
+
+.case-front {
+
+    position: absolute;
+
+    right: 10px;
+    top: 20px;
+
+    width: 22px;
+    height: 230px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+/* LUZ */
+
+.case-light {
+
+    width: 5px;
+    height: 110px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #004AAD,
+            #07ACD5
+        );
+
+    box-shadow:
+        0 0 10px #07ACD5;
+
+}
+
+
+/* BOTÃO */
+
+.case-button {
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 10px #07ACD5;
+
+}
+
+
+/* USB */
+
+.case-usb {
+
+    width: 12px;
+    height: 6px;
+
+    border-radius: 2px;
+
+    background:
+        #05080c;
+
+}
+
+
+/* =====================================================
+   BASE DO GABINETE
+===================================================== */
+
+.case-bottom {
+
+    position: absolute;
+
+    bottom: 5px;
+    left: 20px;
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.case-bottom div {
+
+    width: 30px;
+    height: 4px;
+
+    background:
+        #05080c;
+
+    border-radius: 5px;
+
+}
+
+
+/* =====================================================
+   TECLADO
+===================================================== */
+
+.gaming-keyboard {
+
+    position: absolute;
+
+    left: 35px;
+    bottom: 20px;
+
+    width: 290px;
+    height: 65px;
+
+    background:
+        #111923;
+
+    border:
+        2px solid
+        #344154;
+
+    border-radius: 8px;
+
+    transform:
+        perspective(300px)
+        rotateX(45deg);
+
+    box-shadow:
+        0 10px 20px
+        rgba(0,0,0,.4);
+
+}
+
+
+.keyboard-row {
+
+    height: 8px;
+
+    margin:
+        8px 15px;
+
+    border-radius: 3px;
+
+    background:
+        repeating-linear-gradient(
+            to right,
+            #26364b 0px,
+            #26364b 15px,
+            transparent 15px,
+            transparent 20px
+        );
+
+}
+
+
+/* =====================================================
+   MOUSE
+===================================================== */
+
+.gaming-mouse {
+
+    position: absolute;
+
+    right: 145px;
+    bottom: 20px;
+
+    width: 48px;
+    height: 70px;
+
+    border-radius:
+        25px 25px
+        20px 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #26364a,
+            #0b1119
+        );
+
+    border:
+        2px solid
+        #344154;
+
+    transform:
+        rotate(-8deg);
+
+}
+
+
+.mouse-wheel {
+
+    position: absolute;
+
+    width: 7px;
+    height: 15px;
+
+    left: 50%;
+    top: 12px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius: 5px;
+
+    background:
+        #07ACD5;
+
+    box-shadow:
+        0 0 8px #07ACD5;
+
+}
+
+
+/* =====================================================
+   FLUTUAÇÃO
+===================================================== */
+
+@keyframes pcFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-10px);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .gaming-pc {
+
+        width: 360px;
+        height: 300px;
+
+        transform:
+            scale(.7);
+
+    }
+
+}
